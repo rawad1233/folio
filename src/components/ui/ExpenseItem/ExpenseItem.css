@@ -1,0 +1,59 @@
+.expense-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.expense-item:last-child {
+  border-bottom: none;
+}
+
+.expense-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.expense-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.expense-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.expense-meta {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.expense-date {
+  margin-left: auto;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.expense-amount {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  min-width: 80px;
+  text-align: right;
+}
+
+.expense-delete {
+  color: #d1d5db;
+  display: flex;
+  align-items: center;
+}
+
+.expense-delete:hover {
+  color: #ef4444;
+}

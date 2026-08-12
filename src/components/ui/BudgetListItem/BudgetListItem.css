@@ -1,0 +1,94 @@
+.budget-list-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 12px;
+}
+
+.budget-list-item-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.budget-list-item-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.budget-list-item-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.budget-list-item-month {
+  font-size: 11px;
+  color: #6b7280;
+  background-color: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.budget-list-item-over {
+  font-size: 11px;
+  font-weight: 600;
+  color: #dc2626;
+  background-color: #fef2f2;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.budget-list-item-amount {
+  margin-left: auto;
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+}
+
+.budget-list-item-limit {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.budget-list-item-delete {
+  color: #d1d5db;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.budget-list-item-delete:hover {
+  color: #ef4444;
+}
+
+.budget-list-item-track {
+  height: 8px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.budget-list-item-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.budget-list-item-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.budget-list-item-left {
+  color: #059669;
+}
+
+.budget-list-item-left.over {
+  color: #dc2626;
+}

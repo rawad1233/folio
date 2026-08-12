@@ -1,0 +1,11 @@
+.stats-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.panels-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}

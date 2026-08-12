@@ -1,0 +1,14 @@
+.categories-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 8px 20px;
+  margin-top: 20px;
+}
+
+.categories-card-count {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
