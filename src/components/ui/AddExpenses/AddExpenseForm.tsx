@@ -60,7 +60,7 @@ const AddExpenseForm = ({ categories, onAdd }: AddExpenseFormProps) => {
       <div className="expense-form-row">
         <FormField
           label="Title"
-          placeholder="e.g. Groceries"
+          placeholder="e.g. Chips and snacks"
           value={title}
           onChange={setTitle}
         />
