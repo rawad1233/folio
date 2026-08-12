@@ -56,7 +56,9 @@ const CategoriesPage = () => {
       <AddCategoryForm presetColors={presetColors} onAdd={handleAdd} />
 
       <div className="categories-card">
-        <p className="categories-card-count">{categories.length} categories</p>
+        <p className="categories-card-count">
+          {categories.length} {categories.length === 1 ? 'category' : 'categories'}
+        </p>
 
         {categories.map((category) => (
           <CategoryItem

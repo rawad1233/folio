@@ -9,7 +9,7 @@ const ExpenseList = ({ expenses, onDelete, children }: ExpenseListProps) => {
     <div className="expense-list">
       <div className="expense-list-header">
         <p className="expense-list-summary">
-          {expenses.length} expenses - ${total.toFixed(2)}
+          {expenses.length} {expenses.length === 1 ? 'expense' : 'expenses'} - ${total.toFixed(2)}
         </p>
         {children}
       </div>

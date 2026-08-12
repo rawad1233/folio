@@ -8,15 +8,19 @@ const BudgetUsage = ({ title, rows }: BudgetUsageProps) => {
       <h2 className="budget-panel-title">Budget usage</h2>
       <p className="budget-panel-subtitle">{title}</p>
 
-      {rows.map((row) => (
-        <BudgetUsageRow
-          key={row.name}
-          name={row.name}
-          color={row.color}
-          spent={row.spent}
-          limit={row.limit}
-        />
-      ))}
+      {rows.length === 0 ? (
+        <p className="budget-panel-empty">No budgets set for this month yet.</p>
+      ) : (
+        rows.map((row) => (
+          <BudgetUsageRow
+            key={row.name}
+            name={row.name}
+            color={row.color}
+            spent={row.spent}
+            limit={row.limit}
+          />
+        ))
+      )}
     </div>
   );
 };

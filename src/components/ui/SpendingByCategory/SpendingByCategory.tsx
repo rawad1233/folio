@@ -8,15 +8,19 @@ const SpendingByCategory = ({ title, rows }: SpendingByCategoryProps) => {
       <h2 className="spending-panel-title">Spending by category</h2>
       <p className="spending-panel-subtitle">{title}</p>
 
-      {rows.map((row) => (
-        <SpendingCategoryRow
-          key={row.name}
-          name={row.name}
-          color={row.color}
-          amount={row.amount}
-          percent={row.percent}
-        />
-      ))}
+      {rows.length === 0 ? (
+        <p className="spending-panel-empty">No expenses in this month yet.</p>
+      ) : (
+        rows.map((row) => (
+          <SpendingCategoryRow
+            key={row.name}
+            name={row.name}
+            color={row.color}
+            amount={row.amount}
+            percent={row.percent}
+          />
+        ))
+      )}
     </div>
   );
 };

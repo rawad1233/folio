@@ -67,12 +67,17 @@ const DashboardPage = () => {
 
   const firstName = user?.email ? user.email.split('@')[0] : '';
   const greeting = `${greetingForHour(today.getHours())}${firstName ? `, ${firstName}` : ''}`;
+  const isCurrentMonth = month === today.getMonth() && year === today.getFullYear();
 
   return (
     <div>
       <div className="page-header">
         <h1 className="page-title">{greeting}</h1>
-        <p className="page-subtitle">Here's how your money is moving this month.</p>
+        <p className="page-subtitle">
+          {isCurrentMonth
+            ? "Here's how your money is moving this month."
+            : `Here's how your money moved in ${monthLabel}.`}
+        </p>
       </div>
 
       <MonthPicker
@@ -87,14 +92,14 @@ const DashboardPage = () => {
         <StatCard
           label="Total spent"
           value={`$${stats.totalSpentAllTime.toFixed(2)}`}
-          subtitle={`All time · ${stats.totalExpenseCount} expenses`}
+          subtitle={`All time · ${stats.totalExpenseCount} ${stats.totalExpenseCount === 1 ? 'expense' : 'expenses'}`}
         />
         <StatCard
-          label="This month"
+          label={isCurrentMonth ? 'This month' : monthLabel}
           value={`$${stats.monthSpent.toFixed(2)}`}
           subtitle={monthChangePercent === null
-            ? 'No data for last month'
-            : `${monthChangePercent >= 0 ? '+' : ''}${monthChangePercent}% vs last month`}
+            ? 'No data for previous month'
+            : `${monthChangePercent >= 0 ? '+' : ''}${monthChangePercent}% vs previous month`}
         />
         <StatCard
           label="Top category"

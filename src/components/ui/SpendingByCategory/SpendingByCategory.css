@@ -17,3 +17,9 @@
   margin-top: 2px;
   margin-bottom: 16px;
 }
+
+.spending-panel-empty {
+  font-size: 13px;
+  color: #9ca3af;
+  padding: 12px 0;
+}

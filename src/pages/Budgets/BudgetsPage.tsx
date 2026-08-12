@@ -55,7 +55,7 @@ const BudgetsPage = () => {
       <StatCard
         label="Total budgeted"
         value={`$${totalBudgeted.toFixed(2)}`}
-        subtitle={`${budgets.length} budgets`}
+        subtitle={`${budgets.length} ${budgets.length === 1 ? 'budget' : 'budgets'}`}
       />
 
       <AddBudgetForm categories={categories} onAdd={handleAdd} />
